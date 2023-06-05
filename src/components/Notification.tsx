@@ -1,5 +1,6 @@
+import React from "react";
 import { Warning, Check, Info } from "@phosphor-icons/react";
-import { Type } from "../types";
+import { Type } from "../types/Type";
 
 interface NotificationProps {
     message: string;
