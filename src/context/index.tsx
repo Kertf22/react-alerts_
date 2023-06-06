@@ -1,5 +1,4 @@
-import React,{ FC, createContext, useState } from "react";
-import { useNotify } from "../hooks/useNotify";
+import React, { FC, createContext, useEffect, useState } from "react";
 import { Type } from "../types/Type";
 import { Notification } from "../components/Notification";
 
@@ -23,8 +22,31 @@ interface AlertProviderProps {
   children: React.ReactNode;
 }
 
+interface Notify {
+  message: string;
+  type: Type;
+  show: boolean;
+  delay?: number;
+}
 export const AlertProvider: FC<AlertProviderProps> = ({ children }) => {
-  const { notify, setNotify } = useNotify();
+  
+  const [notify, setNotify] = useState<Notify>({
+    message: "",
+    type: "success",
+    show: false,
+    delay: 5000,
+  });
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setNotify({
+        message: "",
+        type: "success",
+        show: false,
+      });
+    });
+    return () => clearTimeout(timer);
+  }, [notify]);
 
   return (
     <AlertContext.Provider
