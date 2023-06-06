@@ -1,5 +1,5 @@
 {
-  "name": "react-alerts",
+  "name": "@Kertf22/react-alerts",
   "version": "0.0.1",
   "description": "A react component library for displaying alerts",
   "scripts": {
@@ -25,5 +25,8 @@
   "files": [
     "lib"
   ],
-  "types": "lib/index.d.ts"
+  "types": "lib/index.d.ts",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/Kertf22"
+  }
 }
