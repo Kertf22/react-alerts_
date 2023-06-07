@@ -1,4 +1,4 @@
-import React,{ useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Type } from "../types/Type";
 
 interface Notify {
@@ -25,6 +25,7 @@ export const useNotify = () => {
                 show: false
             });
         });
+
         return () => clearTimeout(timer);
     }, [notify]);
 

@@ -1,6 +1,7 @@
 import React, { FC, createContext, useEffect, useState } from "react";
 import { Type } from "../types/Type";
 import { Notification } from "../components/Notification";
+import { useNotify } from "../hooks/useNotify";
 
 interface AlertContextProps {
   openNotify: ({
@@ -22,31 +23,8 @@ interface AlertProviderProps {
   children: React.ReactNode;
 }
 
-interface Notify {
-  message: string;
-  type: Type;
-  show: boolean;
-  delay?: number;
-}
 export const AlertProvider: FC<AlertProviderProps> = ({ children }) => {
-  
-  const [notify, setNotify] = useState<Notify>({
-    message: "",
-    type: "success",
-    show: false,
-    delay: 5000,
-  });
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setNotify({
-        message: "",
-        type: "success",
-        show: false,
-      });
-    });
-    return () => clearTimeout(timer);
-  }, [notify]);
+  const { notify, setNotify } = useNotify();
 
   return (
     <AlertContext.Provider
@@ -62,3 +40,4 @@ export const AlertProvider: FC<AlertProviderProps> = ({ children }) => {
     </AlertContext.Provider>
   );
 };
+

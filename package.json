@@ -1,6 +1,6 @@
 {
   "name": "@Kertf22/react-alerts",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "A react component library for displaying alerts",
   "scripts": {
     "rollup": "rollup -c"
@@ -20,8 +20,8 @@
     "typescript": "^5.0.4"
   },
   "peerDependencies": {
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
