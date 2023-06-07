@@ -61,3 +61,7 @@ export const Notification = ({ message, type }: NotificationProps) => {
         </div>
     )
 }
+
+export const Any = () => {
+    <h1>Test</h1>
+}

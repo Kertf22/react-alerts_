@@ -1,6 +1,6 @@
 {
   "name": "@Kertf22/react-alerts",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "description": "A react component library for displaying alerts",
   "scripts": {
     "rollup": "rollup -c"
@@ -9,7 +9,6 @@
   "author": "Paulo Hercílio Araújo Santana",
   "license": "ISC",
   "devDependencies": {
-    "@phosphor-icons/react": "^2.0.9",
     "@rollup/plugin-commonjs": "^25.0.0",
     "@rollup/plugin-node-resolve": "^15.1.0",
     "@rollup/plugin-typescript": "^11.1.1",
@@ -21,7 +20,8 @@
   },
   "peerDependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "@phosphor-icons/react": "^2.0.9"
   },
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
