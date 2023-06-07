@@ -1,6 +1,6 @@
 {
   "name": "@Kertf22/react-alerts",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "description": "A react component library for displaying alerts",
   "scripts": {
     "rollup": "rollup -c"
